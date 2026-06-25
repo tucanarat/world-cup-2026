@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 FIFA Dünya Kupası – Grup Puan Durumu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap');
+
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --card: #141c2e;
+      --border: #1e2d4a;
+      --accent: #c9a84c;
+      --accent2: #e8c96d;
+      --qualified: #16a34a;
+      --qualified-bg: rgba(22, 163, 74, 0.08);
+      --text: #f0f4ff;
+      --muted: #8892a4;
+      --header-bg: #0d1525;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Barlow', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--header-bg);
+      border-bottom: 2px solid var(--accent);
+      padding: 16px 20px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .trophy { font-size: 1.8rem; line-height: 1; }
+
+    .site-header h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .site-header h1 span { color: var(--accent); }
+
+    .updated {
+      margin-left: auto;
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #last-updated { color: var(--accent2); }
+
+    /* STATUS */
+    #status {
+      text-align: center;
+      padding: 60px 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 26px; height: 26px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* GROUPS GRID */
+    #groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+      padding: 18px 14px 28px;
+    }
+
+    /* GROUP CARD */
+    .group-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .group-title {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 13px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .group-letter {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .group-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* TABLE */
+    table { width: 100%; border-collapse: collapse; }
+
+    thead tr { background: rgba(255,255,255,0.02); }
+
+    thead th {
+      padding: 5px 7px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    thead th:first-child { text-align: left; padding-left: 13px; }
+
+    tbody tr {
+      border-top: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.15s;
+    }
+
+    tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+    tbody tr.qualified {
+      background: rgba(22, 163, 74, 0.08);
+    }
+
+    tbody tr.qualified td:first-child {
+      border-left: 3px solid var(--qualified);
+    }
+
+    tbody tr.eliminated { opacity: 0.45; }
+
+    td {
+      padding: 7px 7px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.81rem;
+    }
+
+    td:first-child { text-align: left; padding-left: 10px; }
+
+    .team-cell {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .rank-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px; height: 17px;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.05);
+      flex-shrink: 0;
+    }
+
+    .qualified .rank-num {
+      color: var(--accent);
+      background: rgba(201,168,76,0.12);
+    }
+
+    .flag { font-size: 1.2rem; line-height: 1; flex-shrink: 0; }
+
+    .team-name {
+      font-weight: 600;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 120px;
+    }
+
+    .q-badge {
+      font-size: 0.58rem;
+      background: var(--qualified);
+      color: #fff;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    td.pts {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .qualified td.pts { color: var(--accent2); }
+
+    /* LEGEND */
+    .legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 0 14px 18px;
+      font-size: 0.73rem;
+      color: var(--muted);
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.06em;
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+
+    .dot {
+      width: 9px; height: 9px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .dot-q { background: var(--qualified); }
+    .dot-e { background: #6b7280; opacity: 0.5; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 12px 14px 18px;
+      font-size: 0.68rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="trophy">🏆</div>
+  <h1>FIFA <span>Dünya Kupası 2026</span> – Grup Puan Durumu</h1>
+  <div class="updated">Son güncelleme: <span id="last-updated">—</span></div>
+</header>
+
+<div id="status">
+  <div class="spinner"></div><br>Yükleniyor…
+</div>
+
+<div id="groups" style="display:none"></div>
+
+<div class="legend" id="legend" style="display:none">
+  <div class="legend-item"><div class="dot dot-q"></div> Gruptan çıkma garantiledi</div>
+  <div class="legend-item"><div class="dot dot-e"></div> Elendi</div>
+</div>
+
+<footer>Veriler saatte bir otomatik güncellenir · SportRadar API</footer>
+
+<script>
+async function load() {
+  try {
+    // data.json'u cache'siz çek
+    const res = await fetch('data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('data.json bulunamadı');
+    const json = await res.json();
+    render(json);
+  } catch (e) {
+    document.getElementById('status').textContent = 'Veri yüklenemedi: ' + e.message;
+  }
+}
+
+function render({ updated_at, groups }) {
+  const container = document.getElementById('groups');
+  container.innerHTML = '';
+
+  groups.forEach(({ group, teams }) => {
+    const card = document.createElement('div');
+    card.className = 'group-card';
+
+    const rows = teams.map(t => {
+      let cls = '';
+      if (t.qualified) cls = 'qualified';
+      else if (t.eliminated) cls = 'eliminated';
+
+      const badge = t.qualified ? `<span class="q-badge">✓ Geçti</span>` : '';
+
+      return `
+        <tr class="${cls}">
+          <td>
+            <div class="team-cell">
+              <span class="rank-num">${t.rank}</span>
+              <span class="flag">${t.flag}</span>
+              <span class="team-name">${t.name}</span>
+              ${badge}
+            </div>
+          </td>
+          <td>${t.played}</td>
+          <td>${t.w}</td>
+          <td>${t.d}</td>
+          <td>${t.l}</td>
+          <td class="pts">${t.pts}</td>
+        </tr>`;
+    }).join('');
+
+    card.innerHTML = `
+      <div class="group-title">
+        <span class="group-letter">${group}</span>
+        <span class="group-label">Grubu</span>
+      </div>
+      <table>
+        <thead><tr>
+          <th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>P</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+
+    container.appendChild(card);
+  });
+
+  document.getElementById('status').style.display = 'none';
+  container.style.display = 'grid';
+  document.getElementById('legend').style.display = 'flex';
+
+  // Güncelleme zamanını Türkiye saatine çevir
+  const d = new Date(updated_at);
+  document.getElementById('last-updated').textContent =
+    d.toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul', day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit' });
+}
+
+load();
+</script>
+</body>
+</html>

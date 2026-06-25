@@ -1,0 +1,689 @@
+{
+  "updated_at": "2026-06-25T22:54:12Z",
+  "groups": [
+    {
+      "group": "A",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "MEX",
+          "name": "Meksika",
+          "flag": "🇲🇽",
+          "played": 3,
+          "w": 3,
+          "d": 0,
+          "l": 0,
+          "pts": 9,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "RSA",
+          "name": "Güney Afrika",
+          "flag": "🇿🇦",
+          "played": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "pts": 4,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "KOR",
+          "name": "Güney Kore",
+          "flag": "🇰🇷",
+          "played": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": true
+        },
+        {
+          "rank": 4,
+          "abbr": "CZE",
+          "name": "Çekya",
+          "flag": "🇨🇿",
+          "played": 3,
+          "w": 0,
+          "d": 1,
+          "l": 2,
+          "pts": 1,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "SUI",
+          "name": "İsviçre",
+          "flag": "🇨🇭",
+          "played": 3,
+          "w": 2,
+          "d": 1,
+          "l": 0,
+          "pts": 7,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "CAN",
+          "name": "Kanada",
+          "flag": "🇨🇦",
+          "played": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "pts": 4,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "BIH",
+          "name": "Bosna Hersek",
+          "flag": "🇧🇦",
+          "played": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": true
+        },
+        {
+          "rank": 4,
+          "abbr": "QAT",
+          "name": "Katar",
+          "flag": "🇶🇦",
+          "played": 3,
+          "w": 0,
+          "d": 1,
+          "l": 2,
+          "pts": 1,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "BRA",
+          "name": "Brezilya",
+          "flag": "🇧🇷",
+          "played": 3,
+          "w": 2,
+          "d": 1,
+          "l": 0,
+          "pts": 7,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "MAR",
+          "name": "Fas",
+          "flag": "🇲🇦",
+          "played": 3,
+          "w": 2,
+          "d": 1,
+          "l": 0,
+          "pts": 7,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "SCO",
+          "name": "İskoçya",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": true
+        },
+        {
+          "rank": 4,
+          "abbr": "HTI",
+          "name": "Haiti",
+          "flag": "🇭🇹",
+          "played": 3,
+          "w": 0,
+          "d": 0,
+          "l": 3,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "USA",
+          "name": "ABD",
+          "flag": "🇺🇸",
+          "played": 2,
+          "w": 2,
+          "d": 0,
+          "l": 0,
+          "pts": 6,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "AUS",
+          "name": "Avustralya",
+          "flag": "🇦🇺",
+          "played": 2,
+          "w": 1,
+          "d": 0,
+          "l": 1,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "PAR",
+          "name": "Paraguay",
+          "flag": "🇵🇾",
+          "played": 2,
+          "w": 1,
+          "d": 0,
+          "l": 1,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "TUR",
+          "name": "Türkiye",
+          "flag": "🇹🇷",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "GER",
+          "name": "Almanya",
+          "flag": "🇩🇪",
+          "played": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pts": 6,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "CIV",
+          "name": "Fildişi Sahili",
+          "flag": "🇨🇮",
+          "played": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pts": 6,
+          "qualified": true,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "ECU",
+          "name": "Ekvador",
+          "flag": "🇪🇨",
+          "played": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": true
+        },
+        {
+          "rank": 4,
+          "abbr": "CUW",
+          "name": "Curaçao",
+          "flag": "🇨🇼",
+          "played": 3,
+          "w": 0,
+          "d": 1,
+          "l": 2,
+          "pts": 1,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "NED",
+          "name": "Hollanda",
+          "flag": "🇳🇱",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "JPN",
+          "name": "Japonya",
+          "flag": "🇯🇵",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "SWE",
+          "name": "İsveç",
+          "flag": "🇸🇪",
+          "played": 2,
+          "w": 1,
+          "d": 0,
+          "l": 1,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "TUN",
+          "name": "Tunus",
+          "flag": "🇹🇳",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "EGY",
+          "name": "Mısır",
+          "flag": "🇪🇬",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "IRN",
+          "name": "İran",
+          "flag": "🇮🇷",
+          "played": 2,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "pts": 2,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "BEL",
+          "name": "Belçika",
+          "flag": "🇧🇪",
+          "played": 2,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "pts": 2,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "NZL",
+          "name": "Yeni Zelanda",
+          "flag": "🇳🇿",
+          "played": 2,
+          "w": 0,
+          "d": 1,
+          "l": 1,
+          "pts": 1,
+          "qualified": false,
+          "eliminated": false
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "ESP",
+          "name": "İspanya",
+          "flag": "🇪🇸",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "URU",
+          "name": "Uruguay",
+          "flag": "🇺🇾",
+          "played": 2,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "pts": 2,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "CPV",
+          "name": "Cape Verde",
+          "flag": "🇨🇻",
+          "played": 2,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "pts": 2,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "KSA",
+          "name": "Suudi Arabistan",
+          "flag": "🇸🇦",
+          "played": 2,
+          "w": 0,
+          "d": 1,
+          "l": 1,
+          "pts": 1,
+          "qualified": false,
+          "eliminated": false
+        }
+      ]
+    },
+    {
+      "group": "I",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "FRA",
+          "name": "Fransa",
+          "flag": "🇫🇷",
+          "played": 2,
+          "w": 2,
+          "d": 0,
+          "l": 0,
+          "pts": 6,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "NOR",
+          "name": "Norveç",
+          "flag": "🇳🇴",
+          "played": 2,
+          "w": 2,
+          "d": 0,
+          "l": 0,
+          "pts": 6,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "SEN",
+          "name": "Senegal",
+          "flag": "🇸🇳",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        },
+        {
+          "rank": 4,
+          "abbr": "IRQ",
+          "name": "Irak",
+          "flag": "🇮🇶",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "J",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "ARG",
+          "name": "Arjantin",
+          "flag": "🇦🇷",
+          "played": 2,
+          "w": 2,
+          "d": 0,
+          "l": 0,
+          "pts": 6,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "AUT",
+          "name": "Avusturya",
+          "flag": "🇦🇹",
+          "played": 2,
+          "w": 1,
+          "d": 0,
+          "l": 1,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "DZA",
+          "name": "Cezayir",
+          "flag": "🇩🇿",
+          "played": 2,
+          "w": 1,
+          "d": 0,
+          "l": 1,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "JOR",
+          "name": "Ürdün",
+          "flag": "🇯🇴",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "K",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "COL",
+          "name": "Kolombiya",
+          "flag": "🇨🇴",
+          "played": 2,
+          "w": 2,
+          "d": 0,
+          "l": 0,
+          "pts": 6,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "POR",
+          "name": "Portekiz",
+          "flag": "🇵🇹",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "COD",
+          "name": "Kongo DR",
+          "flag": "🇨🇩",
+          "played": 2,
+          "w": 0,
+          "d": 1,
+          "l": 1,
+          "pts": 1,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "UZB",
+          "name": "Özbekistan",
+          "flag": "🇺🇿",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    },
+    {
+      "group": "L",
+      "teams": [
+        {
+          "rank": 1,
+          "abbr": "ENG",
+          "name": "İngiltere",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 2,
+          "abbr": "GHA",
+          "name": "Gana",
+          "flag": "🇬🇭",
+          "played": 2,
+          "w": 1,
+          "d": 1,
+          "l": 0,
+          "pts": 4,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 3,
+          "abbr": "CRO",
+          "name": "Hırvatistan",
+          "flag": "🇭🇷",
+          "played": 2,
+          "w": 1,
+          "d": 0,
+          "l": 1,
+          "pts": 3,
+          "qualified": false,
+          "eliminated": false
+        },
+        {
+          "rank": 4,
+          "abbr": "PAN",
+          "name": "Panama",
+          "flag": "🇵🇦",
+          "played": 2,
+          "w": 0,
+          "d": 0,
+          "l": 2,
+          "pts": 0,
+          "qualified": false,
+          "eliminated": true
+        }
+      ]
+    }
+  ]
+}
